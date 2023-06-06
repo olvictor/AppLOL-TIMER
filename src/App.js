@@ -7,6 +7,7 @@ import jg from './Assets/jg.png';
 import adc from './Assets/adc.png';
 import flash from './Assets/flash.png';
 import { useState } from 'react';
+import VoiceRecorder from './Components/VoiceRecorder';
 
 
 
@@ -108,6 +109,7 @@ if(flashJgTimer === 0){
   setAtivoJg(false)
   setFlashJgTimer(300)
 }
+
   return (
    <section>
       <Card img={top} spell={flash}  timer={flashTopTimer} onClick={TimerTop} active={ativoTop} role='TOP'/>
@@ -115,6 +117,7 @@ if(flashJgTimer === 0){
       <Card img={mid} spell={flash}  timer={flashMidTimer} onClick={TimerMid} active={ativoMid} role='MID'/>
       <Card img={adc} spell={flash}  timer={flashAdcTimer} onClick={TimerAdc} active={ativoAdc} role='ADC'/>
       <Card img={sup} spell={flash}  timer={flashSupTimer} onClick={TimerSup} active={ativoSup} role='SUP'/>
+      <VoiceRecorder TimerTop={TimerTop} TimerJg={TimerJg} TimerMid={TimerMid} TimerAdc={TimerAdc} TimerSup={TimerSup}/>
    </section>
   );
 }
